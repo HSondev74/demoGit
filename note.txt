@@ -50,3 +50,7 @@ text-shadow: ngang doc blur radius color;
      //  checkbox toi dong y voi dieu khoan
 
      // Lấy phần tử input
+
+
+
+     toi vua them vao day
