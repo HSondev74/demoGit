@@ -1,0 +1,22 @@
+
+@mixin themes() {
+     .logo {
+          width: 400px;
+          p{
+               text-align: center;
+          }
+     }
+     .a {
+          color: green;
+     }
+}
+
+.frame-11 {
+     width: 500px;
+     background-color: red;
+     @include themes;
+}
+
+
+
+

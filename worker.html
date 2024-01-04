@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+</head>
+<!-- <style>
+     .form {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+          max-width: 350px;
+          padding: 20px;
+          border-radius: 20px;
+          position: relative;
+          background-color: #1a1a1a;
+          color: #fff;
+          border: 1px solid #333;
+     }
+
+     .title {
+          font-size: 28px;
+          font-weight: 600;
+          letter-spacing: -1px;
+          position: relative;
+          display: flex;
+          align-items: center;
+          padding-left: 30px;
+          color: #00bfff;
+     }
+
+     .title::before {
+          width: 18px;
+          height: 18px;
+     }
+
+     .title::after {
+          width: 18px;
+          height: 18px;
+          animation: pulse 1s linear infinite;
+     }
+
+     .title::before,
+     .title::after {
+          position: absolute;
+          content: "";
+          height: 16px;
+          width: 16px;
+          border-radius: 50%;
+          left: 0px;
+          background-color: #00bfff;
+     }
+
+     .message,
+     .signin {
+          font-size: 14.5px;
+          color: rgba(255, 255, 255, 0.7);
+     }
+
+     .signin {
+          text-align: center;
+     }
+
+     .signin a:hover {
+          text-decoration: underline royalblue;
+     }
+
+     .signin a {
+          color: #00bfff;
+     }
+
+     .flex {
+          display: flex;
+          width: 100%;
+          gap: 30px;
+     }
+
+     .form label {
+          position: relative;
+     }
+
+     .form label .input {
+          background-color: #333;
+          color: #fff;
+          width: 100%;
+          padding: 20px 05px 05px 10px;
+          outline: 0;
+          border: 1px solid rgba(105, 105, 105, 0.397);
+          border-radius: 10px;
+     }
+
+     .form .invalid input {
+          border: 1px solid red;
+     }
+
+     .form label .input+span {
+          color: rgba(255, 255, 255, 0.5);
+          position: absolute;
+          left: 10px;
+          top: 0px;
+          font-size: 0.9em;
+          cursor: text;
+          transition: 0.3s ease;
+     }
+
+     .form label .input:placeholder-shown+span {
+          top: 12.5px;
+          font-size: 0.9em;
+     }
+
+     .form label .input:focus+span,
+     .form label .input:valid+span {
+          color: #00bfff;
+          top: 0px;
+          font-size: 0.7em;
+          font-weight: 600;
+     }
+
+     .input {
+          font-size: medium;
+     }
+
+     .submit {
+          border: none;
+          outline: none;
+          padding: 10px;
+          border-radius: 10px;
+          color: #fff;
+          font-size: 16px;
+          transform: .3s ease;
+          background-color: #00bfff;
+     }
+
+     .error-message {
+          display: block;
+          min-width: 150px;
+          font-size: 12px;
+          font-family: Arial, Helvetica, sans-serif;
+          word-break: keep-all;
+          color: red;
+     }
+
+     .submit:hover {
+          background-color: #00bfff96;
+     }
+
+     @keyframes pulse {
+          from {
+               transform: scale(0.9);
+               opacity: 1;
+          }
+
+          to {
+               transform: scale(1.8);
+               opacity: 0;
+          }
+     }
+</style> -->
+<style>
+     .container {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
+          text-align: center;
+     }
+
+     .form_area {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          background-color: #EDDCD9;
+          height: auto;
+          width: auto;
+          border: 2px solid #264143;
+          border-radius: 20px;
+          box-shadow: 3px 4px 0px 1px #E99F4C;
+     }
+
+     .title {
+          color: #264143;
+          font-weight: 900;
+          font-size: 1.5em;
+          margin-top: 20px;
+     }
+
+     .sub_title {
+          font-weight: 600;
+          margin: 5px 0;
+     }
+
+     .form_group {
+          display: flex;
+          flex-direction: column;
+          align-items: baseline;
+          margin: 10px;
+     }
+
+     .form_style {
+          outline: none;
+          border: 2px solid #264143;
+          box-shadow: 3px 4px 0px 1px #E99F4C;
+          width: 290px;
+          padding: 12px 10px;
+          border-radius: 4px;
+          font-size: 15px;
+     }
+
+     .form_style:focus,
+     .btn:focus {
+          transform: translateY(4px);
+          box-shadow: 1px 2px 0px 0px #E99F4C;
+     }
+
+     .btn {
+          padding: 15px;
+          margin: 25px 0px;
+          width: 290px;
+          font-size: 15px;
+          background: #DE5499;
+          border-radius: 10px;
+          font-weight: 800;
+          box-shadow: 3px 3px 0px 0px #E99F4C;
+     }
+
+     .btn:hover {
+          opacity: .9;
+     }
+
+     .link {
+          font-weight: 800;
+          color: #264143;
+          padding: 5px;
+     }
+</style>
+
+<body>
+     <!-- <div class="container">
+          <div class="form_area">
+               <p class="title">SIGN UP</p>
+               <form action="" id="formLogup">
+                    <div class="form_group">
+                         <label class="sub_title" for="name">Name</label>
+                         <input placeholder="Enter your full name" class="form_style" name="username" rules="required"
+                              type="text">
+                         <span class="error-message"></span>
+                    </div>
+                    <div class="form_group">
+                         <label class="sub_title" for="email">Email</label>
+                         <input placeholder="Enter your email" id="email" class="form_style" name="email"
+                              rules="required|email" type="email">
+                         <span class="error-message"></span>
+                    </div>
+                    <div class="form_group">
+                         <label class="sub_title" for="password">Password</label>
+                         <input placeholder="Enter your password" id="password" class="form_style" name="password"
+                              rules="required|min:8|max:30" type="password">
+                         <span class="error-message"></span>
+                    </div>
+                    <div class="form_group">
+                         <label class="sub_title" for="password">Password</label>
+                         <input placeholder="Enter your password" id="password" class="form_style" name="cfpassword"
+                              rules="required|match:password" type="password">
+                         <span class="error-message"></span>
+                    </div>
+                    <div>
+                         <button class="btn">SIGN UP</button>
+                         <p>Have an Account? <a class="link" href="">Login Here!</a></p><a class="link" href="">
+                         </a>
+                    </div><a class="link" href="">
+
+                    </a>
+               </form>
+          </div><a class="link" href="">
+          </a>
+     </div> -->
+     <form class="form" id="form">
+
+          <p class="title">Register </p>
+          <p class="message">Signup now and get full access to our app. </p>
+          <div class="flex">
+               <label class="">
+                    <input class="input" name="firstname" rules="required" type="text" placeholder="">
+                    <span>Firstname</span>
+                    <span class="error-message"></span>
+               </label>
+
+               <label class="">
+                    <input class="input" name="lastname" type="text" rules="required" placeholder="">
+                    <span>Lastname</span>
+                    <span class="error-message"></span>
+               </label>
+          </div>
+
+          <label class="">
+               <input class="input" name="email" type="email" rules="required|email" placeholder="">
+               <span>Email</span>
+               <span class="error-message"></span>
+          </label>
+
+          <label class="">
+               <input class="input" name="password" type="password" rules="required|min:6|max:30" placeholder="">
+               <span>Password</span>
+               <span class="error-message"></span>
+          </label>
+          <label class="">
+               <input class="input" name="cfpassword" type="password" rules="required|match:password" placeholder="">
+               <span>Confirm password</span>
+               <span class="error-message"></span>
+          </label>
+          <button class="submit">Submit</button>
+          <p class="signin">Already have an acount ? <a href="#">Signin</a> </p>
+     </form>
+</body>
+
+<script>
+     /**
+      * get selector by id form
+      * get input have attributes: name and rules
+      * create function validator , and it will be worked : validate (required, min, max, email)
+      * split rules to create object {username: function validate follow rules, ...}
+      * it need push function in object to username or password, ... have functions validate .
+      * then will be call event to get value and use function validate
+      * clear input when input not valid
+      * then will be call event submit to end.
+      */
+     validateLibrary("#form");
+     function validateLibrary(selector) {
+
+          function getParentElement(el) {
+               return el.parentNode;
+          }
+
+          let objRule = {};
+
+          const objSaveFuncValidate = {
+               required: function (value) {
+                    return value.trim() ? "" : "Trường này không được để trống!";
+               },
+               email: function (value) {
+                    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                    return emailRegex.test(value) ? "" : "Email không đúng định dạng!";
+               },
+               min: function (min) {
+                    return function (value) {
+                         return value.length >= min ? "" : `Trường này nhập ít nhất ${min} kí tự`;
+                    };
+               },
+               max: function (max) {
+                    return function (value) {
+                         return value.length <= max ? "" : `Trường này nhập không quá ${max} kí tự`;
+                    };
+               },
+               match: function (truongCheck, truongDeCheck) {
+                    return function (value, formValues) {
+                         const valueInputCheck = formValues[truongCheck];
+
+                         return value === valueInputCheck ? "" : "Mật khẩu chưa trùng khớp";
+                    };
+               },
+          };
+
+          const form = document.querySelector(selector);
+          const inputs = form.querySelectorAll("[name][rules]");
+
+          for (let input of inputs) {
+               let rules = input.getAttribute('rules').split('|');
+               let inputRules = [];
+
+               for (let rule of rules) {
+                    let isRuleHasValue = rule.includes(':');
+                    let ruleInfo = isRuleHasValue ? rule.split(':') : [rule];
+                    let ruleName = ruleInfo[0];
+                    let ruleValue = ruleInfo[1];
+
+                    let funcRule = objSaveFuncValidate[ruleName];
+
+                    if (isRuleHasValue) {
+                         funcRule = funcRule(ruleValue, input.name);
+                    }
+
+                    inputRules.push(funcRule);
+               }
+
+               objRule[input.name] = inputRules;
+
+               // Add this line to fix the issue
+               input.onblur = handleValidateBlur;
+               input.oninput = handleValidateInput;
+          }
+
+          function handleValidateBlur(event) {
+               let errorMessages = [];
+               let rules = objRule[event.target.name];
+
+               for (let rule of rules) {
+                    let errorMessage = rule(event.target.value, getFormValues(form));
+                    if (errorMessage) {
+                         errorMessages.push(errorMessage);
+                    }
+               }
+
+               const elCurrent = getParentElement(event.target);
+
+               if (elCurrent) {
+                    elCurrent.classList.toggle('invalid', errorMessages.length > 0);
+
+                    const errorMessageElement = elCurrent.querySelector('.error-message');
+
+                    // Check if the first error message is defined and does not include "undefined"
+                    if (errorMessages[0] !== undefined) {
+                         errorMessageElement.innerText = errorMessages[0];
+                    } else {
+                         errorMessageElement.innerText = "";
+                    }
+               }
+          }
+
+          function getFormValues(form) {
+               const formValues = {};
+               const inputs = form.querySelectorAll("[name]");
+
+               inputs.forEach((input) => {
+                    formValues[input.name] = input.value;
+               });
+
+               return formValues;
+          }
+
+          function handleValidateInput(event) {
+               const elCurrent = getParentElement(event.target)
+               if (elCurrent) {
+                    elCurrent.classList.remove('invalid');
+                    const errorMessageElement = elCurrent.querySelector('.error-message')
+                    errorMessageElement.innerText = "";
+               }
+          }
+
+          form.onsubmit = function (event) {
+               event.preventDefault();
+               let allErrorMessages = [];
+
+               for (let input of inputs) {
+                    // Trigger blur event for validation
+                    input.dispatchEvent(new Event('blur'));
+
+                    // Get error messages for the current input
+                    let errorMessages = [];
+                    let rules = objRule[input.name];
+
+                    for (let rule of rules) {
+                         let errorMessage = rule(input.value, getFormValues(form)); // Use input.value directly
+                         if (errorMessage) {
+                              errorMessages.push(errorMessage);
+                         }
+                    }
+
+                    // Display error messages for the current input
+                    const elCurrent = getParentElement(input);
+
+                    if (elCurrent) {
+                         elCurrent.classList.toggle('invalid', errorMessages.length > 0);
+
+                         const errorMessageElement = elCurrent.querySelector('.error-message');
+
+                         if (errorMessages[0] !== undefined && !errorMessages[0].includes("undefined")) {
+                              errorMessageElement.innerText = errorMessages[0];
+                         } else {
+                              errorMessageElement.innerText = "";
+                         }
+
+                         // Collect error messages for all inputs
+                         allErrorMessages = allErrorMessages.concat(errorMessages);
+                    }
+               }
+
+               // Display a general error message if there are errors
+               if (allErrorMessages.length > 0) {
+                    // You can choose to display a general error message or perform any other action here
+                    console.log("Form submission failed. Please fix the errors.");
+               } else {
+                    // Proceed with form submission logic here
+                    console.log("Form submitted successfully!");
+                    // Your form submission logic goes here
+               }
+          };
+
+     }
+</script>
+
+</html>

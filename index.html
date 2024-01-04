@@ -2,9 +2,8 @@
 <html lang="en">
 
 <head>
-     <meta charset="UTF-8">
-     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <link rel="stylesheet" href="style.css">
+     <meta charset="UTF-8" />
+     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
      <title>Document</title>
 </head>
 <style>
@@ -14,167 +13,487 @@
           box-sizing: border-box;
      }
 
-     .thecha {
-          /* background: #000; */
-          /* min-width: 300px; */
+     body {
+          font-family: Arial, Helvetica, sans-serif;
      }
 
-     .thecon {
-          /* color: #000;
-          margin-left: 60px;
-          margin-top: 50px; */
+     li {
+          list-style: none;
+          padding: 10px;
      }
 
-     p {
-          color: yellow;
-     }
-
-     .yellow {
-          color: blue;
-          font-weight: 900;
-          font-size: 12px;
-          font-family: 'Courier New', Courier, monospace;
-          background-color: #e46363;
-          text-align: right;
-     }
-
-     .yellow span {
-          color: green;
-          font-size: 30px;
-          text-transform: lowercase;
-     }
-
-     .fnt {
-          font-size: 20px !important;
-     }
-
-     .red {
-          color: red;
-          /* font-size: 17px; */
-     }
-
-     .cha {
-          /* width: 100px; // chieefu rong 
-          height: 90px; // chieu cao  */
-          background-color: #e46363;
-          text-align: center;
-
-     }
-
-     .chat {
-          font-size: 50px;
-          color: #000;
-     }
-
-     .link {
+     a {
           text-decoration: none;
-          font-size: 40px;
           color: black;
      }
 
 
 
 
-     .chat {
-          line-height: 40px;
-     }
 
-     div {
-          /* width: 400px;
-          height: 500px;
-          background-color: black;
-          font-size: 2rem; */
-     }
 
-     .thecha {
-          width: 200px;
+
+
+     /* .div1 {
+          grid-area: 1 / 1 / 2 / 4;
+          background-color: lightblue;
           height: 200px;
-          background-color: #e46363;
-          margin: 0 auto;
-          border: 5px double black;
-          border-radius: 10px 5px 30px 60px;
+     }
+     
+     .div2 {
+          grid-area: 1 / 4 / 2 / 7;
+          background-color: blue;
+          height: 200px;
      }
 
-     .hinhanh {
-          object-fit: cover;
-          width: 250px;
-          height: 300px;
-          background-color: #e46363;
+     .div3 {
+          grid-area: 2 / 1 / 3 / 3;
+          background-color: chartreuse;
+          height: 200px;
      }
 
-     .abc1 {
-          text-align: center;
-          background-color: #e46363;
-          padding-top: 20px;
-          padding-bottom: 20px;
-          padding: 10px 30px 30px 40px;
+     .div4 {
+          grid-area: 2 / 3 / 3 / 5;
+          background-color: red;
+          height: 200px;
+     }
+
+     .div5 {
+          grid-area: 2 / 5 / 3 / 7;
+          background-color: darkorchid;
+          height: 200px;
+     }
+
+     .div6 {
+          grid-area: 3 / 1 / 4 / 7;
+          background-color: gold;
+          height: 200px;
+     } */
+     button {
+          /* border: none;
+          background-color: transparent;
+          color: #fff;
+          font-size: 17px; */
+          padding: 10px;
           margin-top: 10px;
+     }
+
+     header {
+          background-color: #EF5122;
+          padding: 10px 10px;
+          position: sticky;
+          top: 0;
+     }
+
+     .header-list {
+          margin: auto 16px;
+     }
+
+     .header-list li a {
+          color: #fff;
+     }
+
+     .flex-between {
+          display: flex;
+          justify-content: space-between;
+     }
+
+     .flex-center {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+     }
+
+     .header-button button {
+          margin-right: 20px;
+     }
+
+     section {
+          background-color: #ccc;
+          height: 100vh;
+          padding: 40px 10%;
+     }
+
+     .form-group {
+          width: 100%;
+          background-color: #fff;
+          margin: 0px auto;
+          padding: 30px 25px;
+     }
+
+     .form-group_item {
+          display: flex;
+     }
+
+     .item1 {
+
+          margin-bottom: 20px;
+     }
+
+     .form-group_item label {
+          min-width: 100px;
+     }
+
+     .form-group_item input {
+          flex: 1;
+     }
+
+     .content-sidebar {
+          gap: 30px;
+          background-color: #fff;
+          padding: 20px 10px;
+          margin: 40px 0;
+     }
+
+     .description {
+          text-align: justify;
+     }
+
+     .main-feature {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          gap: 30px;
+          margin-bottom: 40px;
+     }
+
+     .feature-one {
+          background-color: aquamarine;
+          padding: 20px 10px;
+     }
+
+     .feature-two {
+          background-color: orangered;
+          padding: 20px;
+     }
+
+     .feature-three {
+          background-color: pink;
+          padding: 20px;
+     }
+
+     .grid-number {
+          display: flex;
+          justify-content: space-between;
+          grid-template-columns: repeat(5, 1fr);
+          padding: 30px 10px;
+          background-color: #fff;
+          flex-wrap: wrap-reverse;
+          gap: 10px;
+          margin-bottom: 40px;
+     }
+
+     .grid-number_item {
+          background-color: #EF5122;
+          padding: 40px 50px;
+          color: #fff;
+          font-size: 40px;
+          font-weight: 700;
+          text-align: center;
+     }
+
+     .center-item {
+          background-color: rgb(112, 176, 166);
+          width: 70%;
+          padding: 120px;
+          margin: 40px auto;
+     }
+
+     center {
+          font-size: 40px;
+          font-weight: 700;
+     }
+
+     .chart-layout {
+          height: 320px;
+          margin-bottom: 40px;
+          background-color: #fff;
+          padding: 40px 10px;
+     }
+
+     .layout_item {
+          align-self: flex-end;
+          width: 60px;
+          color: #fff;
+          text-align: center;
+          background-color: #EF5122;
+          height: var(--percent);
+          animation: growth ease-in-out 2s;
+     }
+
+     .the-end {
+          width: 100%;
+          margin: 40px auto;
+          background-color: #fff;
+
+     }
+
+     .the-end__first {
+          background-color: #fff;
+          padding: 10px;
+     }
+
+     .the-end__second {
+          display: flex;
+          flex-direction: column;
+     }
+
+     .the-end__second-one {
+          background-color: #EF5122;
+          padding: 10px;
+          flex: 1;
+
+     }
+
+     .the-end__second-two {
+          background-color: antiquewhite;
+          padding: 10px;
+          flex: 1;
+     }
+
+     @keyframes growth {
+          from {
+               opacity: 0;
+               height: 0;
+          }
+
+          to {
+               opacity: 1;
+               height: var(--percent);
+          }
+     }
+
+     /* response tablet */
+     @media screen and (max-width: 768px) {
+          .main-feature {
+               grid-template-columns: none;
+          }
+
+          .center-item {
+               margin: 0;
+               width: 100%;
+          }
+
+          .the-end {
+               width: 100%;
+          }
+     }
+
+     /* response mobile */
+     @media screen and (max-width: 500px) {
+          .header-list li a {
+               font-size: 15px;
+          }
+
+          .header-button button {
+               font-size: 15px;
+
+          }
+     }
+
+     .red {
+          background-color: red;
      }
 </style>
 
+
 <body>
-     <div class="thecha">
-          <!-- <img class="hinhanh" src="/kz30aA.jpg" alt="1234"> -->
-     </div>
-     <div style="color: #000;"></div> // inline -> INLINE
-
-     <p class="yellow">
-     <p></p>
-     <span>xin chào</span>
-     </p>
-
-
-     <select name="" id="">
-          <option value="abc">choose a option</option>
-          <option value="abc">choose a option1</option>
-          <option value="abc">choose a option2</option>
-          <option value="abc">choose a option3</option>
-     </select>
-
-
-     <input type="text" placeholder="hello"> //input
-     <input type="number"> //input
-     <input type="radio"> //input
-
-
-
-
-     <a href="" class="link"> the link</a>
-
-     <p id="thep" class="red fnt">heelo world</p>
-     <p>heelo world</p>
-     <p>heelo world</p>
-
-     <div class="cha fnt">
-          <div class="con">
-               <p class="chau">
-                    234
-               </p>
-               <p class="chat fnt">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima corrupti doloribus
-                    hic, error, nihil vel saepe nostrum commodi ut aut quasi. Placeat ex optio, sapiente ab asperiores
-                    minus magni suscipit?</p>
+     <header class="flex-between" style="align-items: center;">
+          <ul class="header-list flex-center ">
+               <li><a href="#main">Gioi thieu</a></li>
+               <li><a href="#chart">Ket noi</a></li>
+               <li><a href="">Tai ung dung</a></li>
+          </ul>
+          <div class="header-button">
+               <button>Dang ky</button>
+               <button>Dang nhap</button>
           </div>
-     </div>
+     </header>
+     <section>
+          <!-- form content -->
+          <!-- <form class="form-group" action="">
+               <nav class="form-group_item item1">
+                    <label for="">Name:</label>
+                    <input type="text" name="" id="input">
+               </nav>
+               <nav class="form-group_item">
+                    <label for="">Password:</label>
+                    <input type="text" name="" id="">
+               </nav>
+          </form> -->
+          <!-- content sidebar -->
+          <!-- <div class="content-sidebar flex-between">
+               <div class="sidebar-one">
+                    <h3 class="title">Sidebar one</h3>
+                    <p class="description">I'm writing to you in reference to the job position advertised MyCV.vn which
+                         immediately appealed to me.Since I've been interested in your company for a long time, I would
+                         like to apply today as a Sample position in permanent employment.</p>
+               </div>
+               <div class="sidebar-two">
+                    <h3 class="title">Main column</h3>
+                    <p class="description">I'm writing to you in reference to the job position advertised MyCV.vn which
+                         immediately appealed to me.Since I've been interested in your company for a long time, I would
+                         like to apply today as a Sample position in permanent employment.
+
+                         At the moment I'm working as a Sample position at Sample company.My most important tasks
+                         include familiarizing myself with new products, conducting sales talks and transferring orders.
+
+                         Your job list sounds great! I hope that this will enable me to develop personal and
+                         professional development opportunities.I like your focus and image in this industry very well,
+                         so I see you as a very interesting employer.I have been following your development for a long
+                         time in the media and therefore believe that I also fit in well with the company.</p>
+               </div>
+               <div class="sidebar-three">
+                    <h3 class="title">Sidebar two</h3>
+                    <p class="description">I'm writing to you in reference to the job position advertised MyCV.vn which
+                         immediately appealed to me.Since I've been interested in your company for a long time, I would
+                         like to apply today as a Sample position in permanent employment.</p>
+               </div>
+          </div> -->
+          <!-- feature -->
+          <!-- <div class="main-feature " id="main">
+               <div class="feature-one">
+                    <h3 class="title">Feature 1</h3>
+                    <p class="description">I'm writing to you in reference to the job position advertised MyCV.vn which
+                         immediately appealed to me.Since I've been interested in your company for a long time, I would
+                         like to apply today as a Sample position in permanent employment.</p>
+               </div>
+               <div class="feature-two">
+                    <h3 class="title">Feature 2</h3>
+                    <p class="description">At the moment I'm working as a Sample position at Sample company.My most
+                         important tasks include familiarizing myself with new products, conducting sales talks and
+                         transferring orders.</p>
+               </div>
+               <div class="feature-three">
+                    <h3 class="title">Feature 3</h3>
+                    <p class="description">Your job list sounds great! I hope that this will enable me to develop
+                         personal and professional development opportunities.I like your focus and image in this
+                         industry very well, so I see you as a very interesting employer.I have been following your
+                         development for a long time in the media and therefore believe that I also fit in well with the
+                         company.</p>
+               </div>
+          </div> -->
+          <!-- grid number -->
+          <!-- <div class="grid-number">
+               <div class="grid-number_item">1</div>
+               <div class="grid-number_item">2</div>
+               <div class="grid-number_item">3</div>
+               <div class="grid-number_item">4</div>
+               <div class="grid-number_item">5</div>
+          </div> -->
+          <!-- center item -->
+          <!-- <div class="center-item">
+               <center>Center item</center>
+          </div> -->
+          <!-- chart layout -->
+          <!-- <div class="chart-layout flex-between" id="chart">
+               <div class="layout_item" style="--percent: 10%">10%</div>
+               <div class="layout_item" style="--percent: 20%">20%</div>
+               <div class="layout_item" style="--percent: 40%">40%</div>
+               <div class="layout_item" style="--percent: 90%">90%</div>
+               <div class="layout_item" style="--percent: 80%">80%</div>
+               <div class="layout_item" style="--percent: 40%">40%</div>
+               <div class="layout_item" style="--percent: 10%">10%</div>
+               <div class="layout_item" style="--percent: 20%">20%</div>
+               <div class="layout_item" style="--percent: 69%">69%</div>
+               <div class="layout_item" style="--percent: 96%">96%</div>
+               <div class="layout_item" style="--percent: 60%">60%</div>
+               <div class="layout_item" style="--percent: 88%">88%</div>
+
+          </div> -->
+
+          <!-- flex end -->
+          <!-- <div class="the-end flex-between">
+               <div class="the-end__first">
+                    <p>I'm writing to you in reference to the job position advertised MyCV.vn which immediately appealed
+                         to me.Since I've been interested in your company for a long time, I would like to apply today
+                         as a Sample position in permanent employment.</p>
+                    <p>At the moment I'm working as a Sample position at Sample company.My most important tasks include
+                         familiarizing myself with new products, conducting sales talks and transferring orders.</p>
+                    <p>Your job list sounds great! I hope that this will enable me to develop personal and professional
+                         development opportunities.I like your focus and image in this industry very well, so I see you
+                         as a very interesting employer.I have been following your development for a long time in the
+                         media and therefore believe that I also fit in well with the company.</p>
+               </div>
+               <div class="the-end__second">
+                    <div class="the-end__second-one">
+                         <p>I'm writing to you in reference to the job position advertised MyCV.vn which immediately
+                              appealed to me.Since I've been interested in your company for a long time.</p>
+                    </div>
+                    <div class="the-end__second-two">
+                         <p>At the moment I'm working as a Sample position at Sample company.My most important tasks
+                              include familiarizing myself with new products, conducting sales talks and transferring
+                              orders.</p>
+                    </div>
+               </div>
+          </div> -->
+          <!-- end -->
+          <!-- <audio src="/ambient-piano-logo-165357.mp3" preload="auto">
+          </audio>
+          <button class="play" onclick="playSong()">play</button>
+          <button class="pause" onclick="pauseSong()">pause</button> -->
+          <!-- <button class="btn-click">click me!</button> -->
+          <!-- <input type="text" class="input-test"> -->
+          <!-- <button class="form-test">click</button>
+          <p>lorem</p>
+          <p>lorem1</p>
+          <p>lorem2</p>
+          <p>lorem3</p>
+          <p>lorem4</p> -->
+
+          <input type="text">
+          <br>
+          <button onclick="getNum(0)">0</button>
+          <button onclick="getNum(1)">1</button>
+          <button onclick="getNum(2)">2</button>
+          <button onclick="getNum(3)">3</button>
+          <button onclick="getNum(4)">4</button><br>
+          <button onclick="getNum(5)">5</button>
+          <button onclick="getNum(6)">6</button>
+          <button onclick="getNum(7)">7</button>
+          <button onclick="getNum(8)">8</button>
+          <button onclick="getNum(9)">9</button>
+          <button onclick="getNum('.')">.</button>
+          <button onclick="delValue()">del</button>
+          <button onclick="delOneNum()">ac</button>
+          <div>
+               <button onclick="getNum('/')">/</button>
+               <button onclick="getNum('*')">x</button>
+               <button onclick="getNum('+')">+</button>
+               <button onclick="getNum('-')"> - </button>
+               <button onclick="calculator()"> = </button>
+          </div>
 
 
 
 
 
-     // the div noi dun nhu sau : có chiều rộng là 400px chiều cao là 500px
-     - tieu de la xin chao moii nguoi can vao giữa
-     - thẻ đoạn văn : một đoạn văn có độ cao của các dòng là cao hơn mặc định // dùng font chữ là monospace, cỡ chữ là
-     25px, độ dày của nó là bold
-     - hình ảnh width 200px cao 400px
-     - ô nhập chữ
-     - 1 cái nút có chữ là submit có nền là đỏ , chữ màu trắng
-     tất cả đều css bằng class / id
 
 
 
-     // màu nền là màu đen , chũ là màu trắng , có khoảng đệm 2 góc trên dưới là 20px trái phải 40px của thẻ div
-     // hình ảnh cách trái của khối div 40px
-     // cái nút dài hơn và cao 30px // không dùng width height
 
+
+     </section>
 </body>
+<script src="/script.js"></script>
+<script>
+     var input = document.querySelector('input');
+     function getNum(num) {
+          input.value += num
+
+          console.log(input.value); // day la du lieu cua input khi nhap vao
+     }
+     function delValue() {
+          input.value = ""
+     }
+
+     function calculator() {
+          input.value = eval(input.value)
+     }
+
+     function delOneNum() {
+          input.value = input.value.slice(0, -1)
+     }
+
+</script>
 
 </html>

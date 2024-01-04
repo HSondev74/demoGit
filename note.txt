@@ -1,0 +1,52 @@
+//word-wrap: normal; -> khi dung normal thi no se tu dong an che do mac dinh , nen no co the bi tran ra khoi box.
+
+//word-wrap: break-word; -> khi dung break-word no se tu dong xem do rong co chiem du text khong neu khong no se tu
+// dong nhay xuong dong.
+
+// text-overflow: ellipsis -> dung de them ba cham neu text bi tran ra ngoai khoi khung hinh da cho
+
+// text-overflow: clip -> dung de cat bot neu text bi tran ra ngoai khoi khung hinh da cho
+
+// white-space: nowrap -> dung de ko cho text xuong dong trong doan van
+
+// normal : binh thuong an che do mac dinh
+// word-break: break-all; -> tu dong xuong dong neu khong du do rong nhung gay ra kieu, no se bi cat tung ki tu
+// xuong dong VD: Cup -> C / up
+
+// word-break: break-word; -> tu dong xuong dong neu khong du do rong no se cat ca mot tu xuong dong VD: World Cup
+// -> World / Cup
+
+/* writing-mode: vertical-rl; vertical-(right left) -> dat text duoc theo chieu doc tu phai qua trai */
+
+/* writing-mode: vertical-lr; vertical-(left right) dat text duoc theo chieu doc tu trai qua phai */
+
+// writing-mode: horizontal-tb; horizontal-(top bottom) dat text duoc theo chieu ngang tren xuong
+
+// vertical : chieu doc -> v
+// horizontal: chieu ngang -> h
+
+
+box-shadow: ngang doc blur radius color;
+text-shadow: ngang doc blur radius color;
+
+
+
+// validate form 
+     /**
+      * có những input sau có type là:  tất cả đều phải báo lỗi
+      * text : min 5 kí tự không được có khoảng trắng, nhiều nhất là 30 kí tự
+      * password: min 7 kí tự max 30, chỉ có các kí tự như a-z A-Z 0-9 -,$. bắt buộc mật khẩu chữ cái đầu phải viết hoa và có 1 kí tự đặc biêt và có số
+      * cfpassword: trùng với password, nếu không nhập thì báo trường này không được để trống. còn ko trùng thì báo không trùng mật khẩu.
+      * email: check xem có phải email không.
+      * checkbox: bắt buộc người phải check nếu không check thì báo đỏ
+      *
+      * khi qua hết validate thì alert bạn đăng kí thành công và log tất cả dữ liệu phía dưới console
+      */
+
+     //  username
+     //  password
+     //  cfpassword
+     //  email
+     //  checkbox toi dong y voi dieu khoan
+
+     // Lấy phần tử input

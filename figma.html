@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+     <!-- Option 1: Include in HTML -->
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+     <title>Document</title>
+</head>
+<style>
+     * {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+     }
+
+
+     body {
+          font-family: 'Work Sans', sans-serif;
+          overflow-x: hidden;
+          overflow-y: hidden;
+     }
+
+     section {
+          overflow-y: scroll;
+     }
+
+     :root {
+          --Gray-White: #FFFFFF;
+          --White: #FFF;
+          --Primary-500: #20B486;
+          --Gray-500: #6D737A;
+          --Gray-50: #E7E9EB;
+     }
+
+     a {
+          text-decoration: none;
+     }
+
+     li {
+          list-style: none;
+     }
+
+     button {
+          padding: 12px 24px;
+          background: transparent;
+          outline: none;
+          border: none;
+     }
+
+     .flex-center {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+     }
+
+     .flex-between {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+     }
+
+     .flex-around {
+          display: flex;
+          justify-content: space-around;
+          align-items: center;
+     }
+
+     .flex-evenly {
+          display: flex;
+          justify-content: space-evenly;
+          align-items: center;
+     }
+
+     header {
+          width: 1920px;
+          border-bottom: 1px solid var(--Gray-50, #E7E9EB);
+          background: var(--Gray-White, #FFF);
+          position: sticky;
+          top: 0;
+     }
+
+     .frame-11 {
+          width: 1320px;
+          margin: 0 auto;
+          padding: 24px 0;
+     }
+
+     .logo p {
+          color: var(--Primary-500, #20B486);
+          text-align: center;
+          font-size: 36px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: 40px;
+          letter-spacing: 0.072px;
+     }
+
+     .frame-8 li {
+          margin-left: 48px;
+          padding: 12px 24px;
+     }
+
+     .frame-8 li a {
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 24px;
+          color: var(--Primary-500, #20B486);
+     }
+
+     .login {
+          color: var(--Gray-500, #6D737A);
+          text-align: center;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 24px;
+          gap: 8px;
+     }
+
+     .sign-up {
+          color: var(--Gray-White, #FFF);
+          text-align: center;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 24px;
+          border-radius: 8px;
+          background: var(--Primary-500, #20B486);
+     }
+
+     section {
+          height: 100vh;
+          background-color: #6D737A;
+     }
+</style>
+
+<body>
+     <header class="container">
+          <div class="frame-11 flex-between container-fluid">
+               <div class="logo">
+                    <p>
+                         Practice
+                    </p>
+               </div>
+
+               <ul class="frame-8 flex-between none">
+                    <li><a href="">Home</a></li>
+                    <li><a href="">About</a></li>
+                    <li><a href="">Course</a></li>
+                    <li><a href="">Blog</a></li>
+                    <li><a href="">Contact</a></li>
+               </ul>
+
+               <div class="frame-2 flex-between">
+                    <button class="login flex-center">
+                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                              <path d="M19.5 8.25H4.49997C4.08576 8.25 3.74997 8.58579 3.74997 9V19.5C3.74997 19.9142 4.08576 20.25 4.49997 20.25H19.5C19.9142 20.25 20.25 19.9142 20.25 19.5V9C20.25 8.58579 19.9142 8.25 19.5 8.25Z"
+                                   stroke="#6D737A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                              <path d="M8.62497 8.25V4.875C8.62497 3.97989 8.98055 3.12145 9.61348 2.48851C10.2464 1.85558 11.1049 1.5 12 1.5C12.8951 1.5 13.7535 1.85558 14.3865 2.48851C15.0194 3.12145 15.375 3.97989 15.375 4.875V8.25"
+                                   stroke="#6D737A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                              <path d="M12 15.375C12.6213 15.375 13.125 14.8713 13.125 14.25C13.125 13.6287 12.6213 13.125 12 13.125C11.3786 13.125 10.875 13.6287 10.875 14.25C10.875 14.8713 11.3786 15.375 12 15.375Z"
+                                   fill="#6D737A" />
+                         </svg>
+                         Login</button>
+                    <button class="sign-up"><i class="bi-alarm"></i>Sign up for Free</button>
+               </div>
+          </div>
+     </header>
+     <section>
+          <div class="container-fluid">
+               <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perferendis minima, pariatur ullam
+                    consectetur necessitatibus minus magni quod ab temporibus veniam cumque odio accusamus eum possimus
+                    consequuntur, facilis quam, blanditiis recusandae.
+                    Voluptatem quia ducimus quam a quo ea beatae, aut quisquam dolorum, dolor cumque, tenetur corrupti
+                    mollitia earum maxime tempore voluptatibus iure molestiae delectus? Quidem voluptates similique amet
+                    recusandae, esse enim?
+                    Nisi aliquid aut omnis mollitia, ipsa eos porro numquam quas, quia autem, veritatis amet? A quisquam
+                    officiis itaque, officia alias repellat amet porro facere maiores. Earum exercitationem at totam
+                    magnam.
+                    Fuga commodi molestiae alias consequuntur animi aspernatur quod recusandae, reprehenderit ullam
+                    minima voluptate aliquid assumenda velit fugit veritatis porro accusantium neque nihil tenetur
+                    voluptatibus in id! Ullam accusantium quos ex.
+                    Voluptates tenetur necessitatibus reprehenderit nesciunt, rerum nisi natus excepturi. Voluptatem,
+                    autem velit quae iste nostrum eum possimus voluptates fuga earum impedit, dolorem nemo molestias
+                    inventore suscipit error maxime dicta consequuntur?
+                    Inventore reprehenderit facere at maxime impedit est, aut odio eveniet dignissimos ad illo officiis,
+                    natus nobis quae atque ab veritatis! Odio quod cumque illum nihil nam, sed eveniet perferendis est?
+                    Architecto ad, assumenda eaque tempora, nulla odit, iste voluptate repellat qui distinctio incidunt?
+                    Magni culpa, doloribus voluptatem sed totam iusto facilis illum rerum itaque at ad saepe quisquam
+                    illo earum.
+                    Animi suscipit porro possimus, et quisquam ut obcaecati hic! Voluptate obcaecati adipisci est
+                    aperiam, odio natus praesentium possimus velit. Quasi, nostrum dolorum sapiente iure nam sequi atque
+                    libero aperiam dicta?
+                    Dignissimos aspernatur debitis distinctio ipsum recusandae fuga vero non odit molestias id illo eos
+                    rem veniam quos odio, ab consequuntur quae, cumque nemo natus possimus earum velit optio! Dolor,
+                    repellendus?
+                    Sint rem praesentium veritatis doloremque aperiam, sequi iure consequuntur dicta eos magni cumque
+                    similique aspernatur, error ad. Animi, ab! Cum neque libero sint illum reiciendis minima provident
+                    odit! Rerum, deserunt.</p>
+          </div>
+          <div class="accordion" id="accordionExample">
+               <div class="accordion-item">
+                    <h2 class="accordion-header">
+                         <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                              data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                              Accordion Item #1
+                         </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                         <div class="accordion-body">
+                              <strong>This is the first item's accordion body.</strong> It is shown by default, until
+                              the collapse plugin adds the appropriate classes that we use to style each element. These
+                              classes control the overall appearance, as well as the showing and hiding via CSS
+                              transitions. You can modify any of this with custom CSS or overriding our default
+                              variables. It's also worth noting that just about any HTML can go within the
+                              <code>.accordion-body</code>, though the transition does limit overflow.
+                         </div>
+                    </div>
+               </div>
+               <div class="accordion-item">
+                    <h2 class="accordion-header">
+                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                              data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                              Accordion Item #2
+                         </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                         <div class="accordion-body">
+                              <strong>This is the second item's accordion body.</strong> It is hidden by default, until
+                              the collapse plugin adds the appropriate classes that we use to style each element. These
+                              classes control the overall appearance, as well as the showing and hiding via CSS
+                              transitions. You can modify any of this with custom CSS or overriding our default
+                              variables. It's also worth noting that just about any HTML can go within the
+                              <code>.accordion-body</code>, though the transition does limit overflow.
+                         </div>
+                    </div>
+               </div>
+               <div class="accordion-item">
+                    <h2 class="accordion-header">
+                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                              data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                              Accordion Item #3
+                         </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                         <div class="accordion-body">
+                              <strong>This is the third item's accordion body.</strong> It is hidden by default, until
+                              the collapse plugin adds the appropriate classes that we use to style each element. These
+                              classes control the overall appearance, as well as the showing and hiding via CSS
+                              transitions. You can modify any of this with custom CSS or overriding our default
+                              variables. It's also worth noting that just about any HTML can go within the
+                              <code>.accordion-body</code>, though the transition does limit overflow.
+                         </div>
+                    </div>
+               </div>
+          </div>
+     </section>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+     integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+     crossorigin="anonymous"></script>
+<!-- <script>
+     /**
+ * bài 1: Tạo ra 1 biến có 10 từ, sau đó tách ra từng từ 1 và in ra màn hình. split.
+ * bài 2: Cho một biến str = "Xin chào Các bạn!", hãy sửa để in ra màn hình thành "xin chào các bạn!"
+ * bài 3: Cho một biến = "Alo, chào bạn" hãy tìm ra từ Alo nếu tìm thấy thì in ra "Tìm thấy" ngược lại "Không tìm thấy"
+ * bài 4: Yêu cầu người dùng nhập số năm sinh vào prompt , sau đó check xem đã đủ 18 hay chưa nếu rồi hiện popup thông báo "bạn đã đủ 18 tuổi", ngược lại thì "bạn chưa đủ 18 tuổi"
+ */
+
+     // bài 1:
+
+     var str1 = "Hello world!";
+     str1.split("");
+
+     // bài 2:
+
+     var str2 = "Xin chào Các bạn!";
+     //c1:
+     str2.toLowerCase();
+
+     // c2:
+     var editStr = str2.replace("X", "x");
+     editStr = editStr.replace("C", "c");
+
+     // bài 3:
+     let chuoi = "Alo, chào bạn";
+     let Str = chuoi.split("Alo");
+
+     if (Str == "Alo") {
+          let phanConLai = Str[0];
+          console.log(phanConLai);
+     } else {
+          console.log("Không tìm thấy từ 'Alo' trong chuỗi.");
+     }
+
+     //bài 4
+     var yearValue = prompt("Hãy nhập năm sinh để xác nhận!");
+     if (yearValue > 1900) {
+          alert(`Bạn đã đủ 18 tuổi, tuổi của bạn là : ${2023 - yearValue}`);
+     } else {
+          alert("năm sinh không hợp lệ!");
+     }
+
+</script> -->
+<script>
+     const section = document.querySelector('section');
+
+     section.addEventListener("scroll", function (event) {
+          console.log("DOMContentLoaded", event.target.scrollTop);
+     });
+
+</script>
+
+</html>
