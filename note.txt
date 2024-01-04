@@ -54,9 +54,5 @@ text-shadow: ngang doc blur radius color;
 
 
      toi vua them vao day
-<<<<<<< HEAD
-     dat them 123
-=======
      dat them 3
->>>>>>> main
      vuw them
